@@ -1,0 +1,5 @@
+# Alipay Configuration
+export ALIPAY_SERVER_URL="https://openapi-sandbox.dl.alipaydev.com/gateway.do"
+export ALIPAY_APP_ID="your_app_id"
+export ALIPAY_PRIVATE_KEY="your_private_key"
+export ALIPAY_PUBLIC_KEY="your_public_key"
