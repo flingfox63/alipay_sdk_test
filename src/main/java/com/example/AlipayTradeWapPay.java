@@ -12,10 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class AlipayTradeWapPay {
     public static void main(String[] args) {
         try {
-            // 从环境变量加载配置
             AlipayConfig config = AlipayConfig.fromEnv();
-
-            // 创建支付宝客户端
             AlipayClient alipayClient = new DefaultAlipayClient(
                     config.getServerUrl(),
                     config.getAppId(),
@@ -36,9 +33,9 @@ public class AlipayTradeWapPay {
             model.setSellerId("2088102147948060");
             request.setBizModel(model);
 
-            AlipayTradeWapPayResponse response = alipayClient.pageExecute(request, "POST");
+//            AlipayTradeWapPayResponse response = alipayClient.pageExecute(request, "POST");
             // 如果需要返回GET请求，请使用
-            // AlipayTradeWapPayResponse response = alipayClient.pageExecute(request, "GET");
+            AlipayTradeWapPayResponse response = alipayClient.pageExecute(request, "GET");
             String pageRedirectionData = response.getBody();
             System.out.println(pageRedirectionData);
 
